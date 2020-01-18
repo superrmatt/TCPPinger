@@ -1,6 +1,9 @@
+package code;
+
 import java.io.IOException;
 import java.net.*;
 import java.util.*;
+import code.Connector;
 
 /**
  * Driver class which opens connection and sends/receives message
