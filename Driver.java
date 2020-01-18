@@ -1,11 +1,12 @@
-package code;
+//package code;
 
 import java.io.IOException;
 import java.net.*;
 import java.util.*;
+
 /**
  * Driver class which opens connection and sends/receives message
- * @author Matt
+ * @author superrmatt
  *
  */
 public class Driver extends TimerTask{
@@ -14,11 +15,18 @@ public class Driver extends TimerTask{
 	 * the port to send message through
 	 */
 	private static int _port = 8000;
+
 	/**
-	 * IP address of client
+	* Milliscond rate of the run() method execution. 3600000 (the default) is one hour.
+	*/
+	private static _rate = 3600000
+
+	/**
+	 * IP address of client & server
 	 */
 	private static String _clientIP = "";
 	private static String _serverIP = "137.142.52.95";
+
 	/**
 	 * holds reference to the connector class
 	 */
@@ -26,13 +34,14 @@ public class Driver extends TimerTask{
 	
 	/**
 	 * main. instantiates a timer and schedules it to run every hour
-	 * every hour the run() method will be executed
-	 * @param args
+	 * Can be easily changed to run in whatever time rate you want. simply update the rate variable.
+	 * every hour the run() method will be executed.
+	 * @param args array of strings, no args necesary in this.
 	 */
 	public static void main(String[] args){
 		for(int i = 0; i < 205; i ++){ //this was set to an arbitrary value, at end of day I simply turned it off. wanted to use a number high enough where I wouldn't have any chance of having to restart it
 			Timer timer = new Timer();
-			timer.schedule(new Driver(), 3600000); //number of milliseconds in an hour
+			timer.schedule(new Driver(), _rate);
 		}
 	}
 

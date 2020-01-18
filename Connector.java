@@ -1,8 +1,9 @@
-package code;
+//package code;
 
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
 /**
  * class which contains a method to establish a conenction to the server
  * @author superrmatt
@@ -13,10 +14,12 @@ public class Connector {
 	 * holds the messages received by the server
 	 */
 	private static ArrayList<String> _replies = new ArrayList<String>();
+
 	/**
 	 * String message to send to server
 	 */
 	private static String _message = "hello";
+
 	/**
 	 * opens the connection to the server
 	 * @param socket the socket with which to send connection through
