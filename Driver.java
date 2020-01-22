@@ -20,13 +20,13 @@ public class Driver extends TimerTask{
 	/**
 	* Milliscond rate of the run() method execution. 3600000 (the default) is one hour.
 	*/
-	private static _rate = 3600000
+	private static int _rate = 3600000;
 
 	/**
 	 * IP address of client & server
 	 */
 	private static String _clientIP = "";
-	private static String _serverIP = "137.142.52.95";
+	private static String _serverIP = "";
 
 	/**
 	 * holds reference to the connector class
